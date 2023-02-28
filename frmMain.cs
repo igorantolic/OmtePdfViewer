@@ -49,21 +49,25 @@ namespace OmtePdfViewer
             }
         }
 
+        public string lastFileName { get; set; } = "";
+
         private void cmdSave_Click(object sender, EventArgs e)
         {
             var i = new PersistenceItem()
             {
                 ApiKey = txtApiKey.Text,
-                Body= txtBody.Text,
-                OmteUrl= txtUrl.Text,
+                Body = txtBody.Text,
+                OmteUrl = txtUrl.Text,
             };
             saveFileDialog1.Filter = "Json|*.json";
             saveFileDialog1.Title = "Save settings";
+            saveFileDialog1.FileName = lastFileName;
             var r = saveFileDialog1.ShowDialog();
-            if (r== DialogResult.OK)
+            if (r == DialogResult.OK)
             {
                 var fn = saveFileDialog1.FileName;
                 File.WriteAllText(fn, JsonConvert.SerializeObject(i));
+                this.Text = $"Omte PDF viewer - {new FileInfo(fn).Name }";
             }
         }
 
@@ -72,14 +76,16 @@ namespace OmtePdfViewer
             openFileDialog1.Filter = "Json|*.json";
             openFileDialog1.Title = "Load settings";
             var r = openFileDialog1.ShowDialog();
-            if (r== DialogResult.OK)
+            if (r == DialogResult.OK)
             {
                 var fn = openFileDialog1.FileName;
                 var fc = File.ReadAllText(fn);
                 var s = JsonConvert.DeserializeObject<PersistenceItem>(fc);
-                txtApiKey.Text =s.ApiKey;
-                txtBody.Text =s.Body;
-                txtUrl.Text =s.OmteUrl;
+                txtApiKey.Text = s.ApiKey;
+                txtBody.Text = s.Body;
+                txtUrl.Text = s.OmteUrl;
+                this.Text = $"Omte PDF viewer - {new FileInfo(fn).Name }";
+                lastFileName = new FileInfo(fn).Name;
             }
         }
 

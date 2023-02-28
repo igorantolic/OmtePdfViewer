@@ -76,18 +76,21 @@
             // 
             this.cmdPrettify.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmdPrettify.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.cmdPrettify.Image = ((System.Drawing.Image)(resources.GetObject("cmdPrettify.Image")));
+            this.cmdPrettify.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.cmdPrettify.Location = new System.Drawing.Point(9, 106);
             this.cmdPrettify.Name = "cmdPrettify";
             this.cmdPrettify.Size = new System.Drawing.Size(76, 24);
             this.cmdPrettify.TabIndex = 8;
             this.cmdPrettify.Text = "Prettify";
+            this.cmdPrettify.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.cmdPrettify.UseVisualStyleBackColor = true;
             this.cmdPrettify.Click += new System.EventHandler(this.cmdPrettify_Click);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(13, 19);
+            this.label2.Location = new System.Drawing.Point(13, 18);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(74, 13);
             this.label2.TabIndex = 7;
@@ -97,11 +100,14 @@
             // 
             this.cmdSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmdSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.cmdSave.Image = ((System.Drawing.Image)(resources.GetObject("cmdSave.Image")));
+            this.cmdSave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.cmdSave.Location = new System.Drawing.Point(191, 12);
             this.cmdSave.Name = "cmdSave";
-            this.cmdSave.Size = new System.Drawing.Size(76, 24);
+            this.cmdSave.Size = new System.Drawing.Size(81, 24);
             this.cmdSave.TabIndex = 5;
             this.cmdSave.Text = "Save";
+            this.cmdSave.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.cmdSave.UseVisualStyleBackColor = true;
             this.cmdSave.Click += new System.EventHandler(this.cmdSave_Click);
             // 
@@ -109,11 +115,14 @@
             // 
             this.cmdLoad.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmdLoad.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.cmdLoad.Image = ((System.Drawing.Image)(resources.GetObject("cmdLoad.Image")));
+            this.cmdLoad.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.cmdLoad.Location = new System.Drawing.Point(100, 12);
             this.cmdLoad.Name = "cmdLoad";
-            this.cmdLoad.Size = new System.Drawing.Size(76, 24);
+            this.cmdLoad.Size = new System.Drawing.Size(85, 24);
             this.cmdLoad.TabIndex = 4;
             this.cmdLoad.Text = "Load";
+            this.cmdLoad.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.cmdLoad.UseVisualStyleBackColor = true;
             this.cmdLoad.Click += new System.EventHandler(this.cmdLoad_Click);
             // 
@@ -130,14 +139,18 @@
             // cmdShow
             // 
             this.cmdShow.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.cmdShow.BackColor = System.Drawing.Color.White;
             this.cmdShow.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmdShow.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.cmdShow.Image = ((System.Drawing.Image)(resources.GetObject("cmdShow.Image")));
+            this.cmdShow.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.cmdShow.Location = new System.Drawing.Point(378, 53);
             this.cmdShow.Name = "cmdShow";
-            this.cmdShow.Size = new System.Drawing.Size(117, 47);
+            this.cmdShow.Size = new System.Drawing.Size(117, 77);
             this.cmdShow.TabIndex = 2;
             this.cmdShow.Text = "PDF";
-            this.cmdShow.UseVisualStyleBackColor = true;
+            this.cmdShow.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.cmdShow.UseVisualStyleBackColor = false;
             this.cmdShow.Click += new System.EventHandler(this.cmdShow_Click);
             // 
             // txtBody
@@ -145,6 +158,7 @@
             this.txtBody.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtBody.Font = new System.Drawing.Font("Courier New", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBody.Location = new System.Drawing.Point(3, 136);
             this.txtBody.Multiline = true;
             this.txtBody.Name = "txtBody";
