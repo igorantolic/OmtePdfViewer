@@ -27,8 +27,10 @@ namespace OmtePdfViewer
             try
             {
                 webBrowser1.DocumentText = "working..";
-                var fn = $@"c:\dummy\a{DateTime.Now.ToString("yyyyMMddHHmmss")}.pdf";
-
+                //var fn = $@"c:\dummy\a{DateTime.Now.ToString("yyyyMMddHHmmss")}.pdf";
+                if (!Directory.Exists(Properties.Settings.Default.PdfOutputFolder)) Directory.CreateDirectory(Properties.Settings.Default.PdfOutputFolder);
+                var fn = $@"{DateTime.Now.ToString("yyyyMMddHHmmss")}.pdf";
+                fn = Path.Combine(Properties.Settings.Default.PdfOutputFolder, fn);
                 webClient.Headers.Add("X-API-KEY", txtApiKey.Text);
                 webClient.Headers.Add("Accepr", "application/json, application/*+json");
                 var jsonB = webClient.UploadData(txtUrl.Text, "POST", UTF8Encoding.UTF8.GetBytes(txtBody.Text));
